@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 import numpy as np
 import joblib
 
-model = joblib.load("model/lgb_cardio_dummy.pkl ")
+model = joblib.load("lgb_cardio_dummy.pkl ")
 
 app = Flask(__name__)
 
@@ -33,11 +33,11 @@ def predict():
 
     def statement():
         if pred == 0:
-            return "Result:- {} The model has predicted that you will not suffer from any cardic arresst but you should take care of your self.".format(
+            return "Result:- Hi {}, the model has predicted that you do not have cardiac disease. However stay healthy and exercise daily".format(
                 datax
             )
         elif pred == 1:
-            return "Result:- {} You should consult with doctor, The model has predicted that you will suffer form cardic arrest.".format(
+            return "Result:- Hey {}, the model has predicted that there is high for you to have cardiac related disease. Maintain diet, stay fit and if any discomfort consult doctor.".format(
                 datax
             )
 
