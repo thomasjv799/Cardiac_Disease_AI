@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 import numpy as np
 import joblib
 
-model = joblib.load("lgb_cardio_dummy.pkl ")
+model = joblib.load("models/lgb_cardio_dummy.pkl ")
 
 app = Flask(__name__)
 
