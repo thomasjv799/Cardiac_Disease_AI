@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<style>
+table,th,
+td {
+border: 1px solid black;
+}
+</style>
+<body>
+<table>
+<tr>
+<th>Name</th>
+<th>Age</th>
+<th>Gender</th>
+<th>Height</th>
+<th>Weight</th>
+<th>Systolic pressure</th>
+<th>Diastolic pressure</th>
+<th>Cholestrol</th>
+<th>Glucose</th>
+<th>Smoker</th>
+<th>Alcoholic</th>
+<th>Active</th>
+<!--<th>Prediction</th>-->
+
+</tr>
+{% for user in users %}
+<tr>
+<td>{{ user['name']}}</td>
+<td>{{ user['age'] }}</td>
+<td>{{ user['gender'] }}</td>
+<td>{{ user['height'] }}</td>
+<td>{{ user['weight'] }}</td>
+<td>{{ user['syst_pressure'] }}</td>
+<td>{{ user['diast_pressure'] }}</td>
+<td>{{ user['cholestrol'] }}</td>
+<td>{{ user['glucose'] }}</td>
+<td>{{ user['smoker'] }}</td>
+<td>{{ user['alcoholic'] }}</td>
+<td>{{ user['active'] }}</td>
+<!--<td>{{ user['pred'] }}</td>-->
+
+
+</tr>
+{% endfor %}
+</table>
+</body>
+</head>
+</html>
