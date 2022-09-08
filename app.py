@@ -6,7 +6,7 @@ import pymongo
 from pymongo import MongoClient
 
 cluster = MongoClient(
-    "mongodb+srv://thomasjv:thomas5799@cardiodb.u39tfih.mongodb.net/?retryWrites=true&w=majority"
+    "mongodb+srv://{username}:{password}@cardiodb.u39tfih.mongodb.net/?retryWrites=true&w=majority"
 )
 DB = cluster["CardioML"]
 collection = DB["Flask"]
