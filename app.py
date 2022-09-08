@@ -1,6 +1,16 @@
+import collections
 from flask import Flask, render_template, request
 import numpy as np
 import pickle
+import pymongo
+from pymongo import MongoClient
+
+cluster = MongoClient(
+    "mongodb+srv://thomasjv:thomas5799@cardiodb.u39tfih.mongodb.net/?retryWrites=true&w=majority"
+)
+DB = cluster["CardioML"]
+collection = DB["Flask"]
+
 
 model = pickle.load(open("models/cardio.pkl", "rb"))
 
@@ -30,6 +40,21 @@ def predict():
         [data1, data2, data3, data4, data5, data6, data7, data8, data9, data10, data11]
     )
     pred = model.predict([features])
+    post = {
+        "name": datax,
+        "age": data1,
+        "gender": data2,
+        "height": data3,
+        "weight": data4,
+        "systolic": data5,
+        "diastolic": data6,
+        "cholestrol": data7,
+        "glucose": data8,
+        "smoke": data9,
+        "alcohol": data10,
+        "exercise": data11,
+    }
+    collection.insert_one(post)
 
     def statement():
         if pred == 0:
