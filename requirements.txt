@@ -15,7 +15,7 @@ pathspec==0.9.0
 pickleshare==0.7.5
 regex==2021.7.6
 scikit-learn==0.24.2
-scipy==1.7.0
+scipy==1.7.2
 threadpoolctl==2.2.0
 tomli==1.1.0
 typed-ast==1.4.3
