@@ -62,7 +62,7 @@ def predict():
                 datax
             )
         elif pred == 1:
-            return "Result:- Hey {}, the model has predicted that there is high for you to have cardiac related disease. Maintain diet, stay fit and if any discomfort consult doctor.".format(
+            return "Result:- Hey {}, the model has predicted that there is high chance that you have cardiac related disease. Maintain diet, stay fit and if any discomfort consult doctor.".format(
                 datax
             )
 
