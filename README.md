@@ -21,6 +21,6 @@ MongoDB is the backend here. All the data gets stored into Mongo Cluster in the 
 ## Deployment
 The application was deployed in Heroku. However taken down now due to some updates in their server.
 
-# App Overview
+## App Overview
 
 ![alt text](https://github.com/wanderer799/cuddly-succotash/blob/master/app.PNG?raw=true)
