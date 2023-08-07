@@ -3,7 +3,6 @@ name: Code Review GPT
 on:
   push:
     branches: [master]
-
 permissions:
   pull-requests: write
   contents: read
